@@ -1,2 +1,50 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Pu3eLuv's Blog</title><link>https://Pu3eLuv.github.io</link><description>Talk shits, record thoughts</description><copyright>Pu3eLuv's Blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/175627847?v=4</url><title>avatar</title><link>https://Pu3eLuv.github.io</link></image><lastBuildDate>Thu, 20 Nov 2025 07:31:28 +0000</lastBuildDate><managingEditor>Pu3eLuv's Blog</managingEditor><ttl>60</ttl><webMaster>Pu3eLuv's Blog</webMaster><item><title>The Beginning</title><link>https://Pu3eLuv.github.io/post/The%20Beginning.html</link><description>### **Odyssey Begins**。</description><guid isPermaLink="true">https://Pu3eLuv.github.io/post/The%20Beginning.html</guid><pubDate>Thu, 20 Nov 2025 07:20:32 +0000</pubDate></item></channel></rss>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Pu3eLuv's Blog</title><link>https://Pu3eLuv.github.io</link><description>Talk shits, record thoughts</description><copyright>Pu3eLuv's Blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/175627847?v=4</url><title>avatar</title><link>https://Pu3eLuv.github.io</link></image><lastBuildDate>Thu, 20 Nov 2025 14:48:10 +0000</lastBuildDate><managingEditor>Pu3eLuv's Blog</managingEditor><ttl>60</ttl><webMaster>Pu3eLuv's Blog</webMaster><item><title>JWT 无签名</title><link>https://Pu3eLuv.github.io/post/JWT%20-wu-qian-ming.html</link><description># JWT none算法绕过认证
+JWT “none” 算法漏洞详解  
+标签：`JWT` `安全` `漏洞分析` `Token` `Web`
+由G老师扩写排版
+
+---
+
+## 目录
+
+- 1. 何为 “none” 算法漏洞
+        
+- 2. JWT 的结构回顾（Header / Payload / Signature）
+        
+- 3. 漏洞形成的原因
+        
+- 4. 漏洞复现示例
+        
+    
+    - 4.1 原始 JWT
+        
+    - 4.2 修改 Header 为 `alg=none`
+        
+    - 4.3 构造无签名的 Token
+        
+    - 4.4 完整 none-token 示例
+        
+- 5. 为什么这一攻击有效
+        
+- 6. 可利用的攻击点（权限提升示例）
+        
+- 7. 如何彻底修复该漏洞
+        
+- 8. 小结
+        
+
+---
+
+# 1. 何为 “none” 算法漏洞
+
+JWT 支持多种签名算法，如：
+
+- HS256（对称 HMAC）
+    
+- RS256（非对称 RSA）
+    
+
+然而早期实现允许使用一种特殊算法：  
+**alg = 'none'**  
+代表：**JWT 不进行任何签名验证**。</description><guid isPermaLink="true">https://Pu3eLuv.github.io/post/JWT%20-wu-qian-ming.html</guid><pubDate>Thu, 20 Nov 2025 14:47:41 +0000</pubDate></item><item><title>The Beginning</title><link>https://Pu3eLuv.github.io/post/The%20Beginning.html</link><description>### **Odyssey Begins**。</description><guid isPermaLink="true">https://Pu3eLuv.github.io/post/The%20Beginning.html</guid><pubDate>Thu, 20 Nov 2025 07:20:32 +0000</pubDate></item></channel></rss>
